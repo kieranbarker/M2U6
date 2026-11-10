@@ -4,7 +4,7 @@ class Employee:
         self.salary = salary
 
     def format_salary(self):
-        pass
+        return f"${self.salary:,.2f}"
 
     def raise_salary(self, by_percent):
         pass
