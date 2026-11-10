@@ -7,4 +7,7 @@ class Employee:
         return f"${self.salary:,.2f}"
 
     def raise_salary(self, by_percent):
-        pass
+        if by_percent <= 0:
+            raise ValueError("by_percent must be positive")
+        increase = self.salary * by_percent / 100
+        self.salary += increase
